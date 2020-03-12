@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block new_content %}
+<table class="table table-striped">
+    <tr>
+        <td>网络接收到包数量，单位个</td>
+        <td>{{ netio.net_rpck }}个</td>
+    </tr>
+     <tr>
+        <td>网络发送包数量，单位个</td>
+        <td>{{ netio.net_tpck }}个</td>
+    </tr>
+     <tr>
+        <td>网络每秒接收数据量，KB/s</td>
+        <td>{{ netio.net_receiver }}KB/s</td>
+    </tr>
+     <tr>
+        <td>网络每秒发送数据量，KB/s</td>
+        <td>{{ netio.net_transfer }}KB/s</td>
+    </tr>
+     <tr>
+        <td>网络繁忙度</td>
+        <td>{{ netio.net_util }}%</td>
+    </tr>
+     <tr>
+        <td>系统时间</td>
+        <td>{{ now_time }}</td>
+    </tr>
+
+</table>
+{% endblock %}

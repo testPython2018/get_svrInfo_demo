@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block new_content %}
+<table class="table table-striped">
+    <tr>
+        <td>数据盘读写TPS</td>
+        <td>{{ dataio.data_tps }}</td>
+    </tr>
+     <tr>
+        <td>数据盘每秒读取的数据量，KB/s</td>
+        <td>{{ dataio.data_read }}KB/s</td>
+    </tr>
+     <tr>
+        <td>数据盘每秒读取的数据量，KB/s</td>
+        <td>{{ dataio.data_write }}KB/s</td>
+    </tr>
+     <tr>
+        <td>数据盘IO读写一次平均响应时间</td>
+        <td>{{ dataio.data_await }}ms</td>
+    </tr>
+    <tr>
+        <td>数据盘IO每次处理时间</td>
+        <td>{{ dataio.data_avctm }}ms</td>
+    </tr>
+     <tr>
+        <td>设备繁忙度</td>
+        <td>{{ dataio.data_util }}%</td>
+    </tr>
+     <tr>
+        <td>系统时间</td>
+        <td>{{ now_time }}</td>
+    </tr>
+
+</table>
+{% endblock %}

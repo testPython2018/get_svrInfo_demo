@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block new_content %}
+<table class="table table-striped">
+    <tr>
+        <td>系统盘读写TPS</td>
+        <td>{{ sysio.sys_tps }}</td>
+    </tr>
+     <tr>
+        <td>系统盘每秒读取的数据量，KB/s</td>
+        <td>{{ sysio.sys_read }}KB/s</td>
+    </tr>
+     <tr>
+        <td>系统盘每秒读取的数据量，KB/s</td>
+        <td>{{ sysio.sys_write }}KB/s</td>
+    </tr>
+     <tr>
+        <td>系统盘IO读写一次平均响应时间</td>
+        <td>{{ sysio.sys_await }}ms</td>
+    </tr>
+    <tr>
+        <td>系统盘IO每次处理时间</td>
+        <td>{{ sysio.sys_avctm }}ms</td>
+    </tr>
+     <tr>
+        <td>设备繁忙度</td>
+        <td>{{ sysio.sys_util }}%s</td>
+    </tr>
+     <tr>
+        <td>系统时间</td>
+        <td>{{ now_time }}</td>
+    </tr>
+
+</table>
+{% endblock %}
+

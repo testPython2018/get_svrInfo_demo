@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block new_content %}
+    <table class="table table-striped">
+        <tr>
+            <td>物理CPU核心数</td>
+            <td>{{ cpu.p_CPU }}个</td>
+        </tr>
+        <tr>
+            <td>逻辑CPU核心数</td>
+            <td>{{ cpu.CPU }}个</td>
+        </tr>
+        <tr>
+            <td>CPU使用率</td>
+            <td>{{ cpu.cpu_util }}%</td>
+        </tr>
+        <tr>
+            <td>最近1分钟平均负载</td>
+            <td>{{ cpu.averageload_1 }}</td>
+        </tr>
+        <tr>
+            <td>最近5分钟平均负载</td>
+            <td>{{ cpu.averageload_5 }}</td>
+        </tr>
+        <tr>
+            <td>最近15分钟平均负载</td>
+            <td>{{ cpu.averageload_15 }}</td>
+        </tr>
+        <tr>
+            <td>用户CPU使用率</td>
+            <td>{{ cpu.user }}%</td>
+        </tr>
+        <tr>
+            <td>系统CPU使用率</td>
+            <td>{{ cpu.system }}%</td>
+        </tr>
+        <tr>
+            <td>CPU等待IO完成</td>
+            <td>{{ cpu.iowait }}</td>
+        </tr>
+        <tr>
+            <td>可运行进程数，包括Runing和waiting</td>
+            <td>{{ cpu.running_pro }}个</td>
+        </tr>
+        <tr>
+            <td>上下文切换，单位为次</td>
+            <td>{{ cpu.ctx_switch }}次</td>
+        </tr>
+        <tr>
+            <td>系统中断数据，单位为次</td>
+            <td>{{ cpu.interrupts }}次</td>
+        </tr>
+        <tr>
+            <td>系统时间</td>
+            <td>{{ now_time }}</td>
+        </tr>
+    </table>
+{% endblock %}
+
