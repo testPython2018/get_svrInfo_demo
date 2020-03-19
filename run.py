@@ -10,7 +10,7 @@ import platform
 from common.getSvrInfo import serverInfo
 
 global svrip
-svrip="172.16.10.29"
+svrip="172.16.10.39"
 
 
 @app.route('/sys/')
